@@ -32,7 +32,6 @@ GEM
     ansi (1.4.1)
     arel (2.2.1)
     builder (3.0.0)
-    cape (1.0.1)
     capistrano (2.8.0)
       highline
       net-scp (>= 1.0.0)
@@ -135,7 +134,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cape
   capistrano
   capistrano-ext
   coffee-rails (~> 3.1.1)
