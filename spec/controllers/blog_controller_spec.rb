@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe BlogController do
+  render_views
 
   before :each do
     @post1 = Factory :post_first
@@ -8,11 +9,6 @@ describe BlogController do
   end
 
   describe "GET 'index'" do
-
-    it "should be successful" do
-      get 'index'
-      response.should be_success
-    end
 
     it "should grab all posts" do
       get :index
@@ -23,13 +19,20 @@ describe BlogController do
   end
 
   describe "GET 'show'" do
-    it "should be successful" do
-      get 'show'
-      response.should be_success
+
+    it "should get a post" do
+      get :show, :id => 'first-post'
+      assigns[:post].title.should == 'First Post'
     end
 
     it "should allow me to visit a blog post by its slug" do
-      nil.should == 5 
+      visit '/blog/first-post'
+      page.should have_content('First Post')
+    end
+
+    it "should allow me to visit a post by /journal route" do
+      visit '/journal/first-post'
+      page.should have_content('First Post')
     end
 
   end

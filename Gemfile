@@ -8,6 +8,8 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'compass'
 
+gem 'friendly_id', '~> 4.0.0.beta14'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -29,4 +31,5 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'capybara'
 end

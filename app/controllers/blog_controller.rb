@@ -5,6 +5,7 @@ class BlogController < ApplicationController
   end
 
   def show
+    @post = Post.where("slug = ?", params[:id]).first
   end
 
 end
