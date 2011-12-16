@@ -25,3 +25,8 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-ext' # multi-stage
 end
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end

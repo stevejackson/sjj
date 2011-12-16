@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+
+require 'date'
+
+for i in 1..15 do
+  Post.create! title: "Post #{i}",
+    content: "My post content for #{i}",
+    slug: "post-#{i}",
+    date: DateTime.now
+end
