@@ -12,7 +12,7 @@ FactoryGirl.define do
     end
 
     sequence :date do |i|
-      Date.new(2011, 5, i)
+      Date.new(2011, 5, 30)
     end
   end
 

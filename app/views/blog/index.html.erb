@@ -2,10 +2,12 @@
 <p>Find me in app/views/blog/index.html.erb</p>
 
 <article>
-<%= @posts.each do |p| %>
+<% @posts.each do |p| %>
   
-  <h1><%= p.title %></h1>
+  <h2><%= p.title %></h2>
   <p><%= p.content %></p>
 
 <% end %>
 </article>
+
+<%= will_paginate(@posts) %>
